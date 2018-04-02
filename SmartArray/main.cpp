@@ -9,16 +9,19 @@ class SmartArray {
 private:
 
     int sum;
+    int size;
     double average;
-    vector<T> array;
+    T array[];
 
 public:
 
     SmartArray(initializer_list<T> init) : array(init) {
         sum = 0;
         average = 0.0;
-        for(int i = 0; i < array.size(); i++) {
-            sum+= array[i];
+        size = init.size();
+
+        for(int i = 0; i < size; i++) {
+            sum += array[i];
         }
         average = sum/array.size();
     }
