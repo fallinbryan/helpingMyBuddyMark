@@ -2,7 +2,10 @@
 #include <fstream>
 #include <string.h>
 using namespace std;
-
+// A C String is a special type of array in C++, it is handled a little differently than standard arrays
+// for example, when you input some text into a C String, the compiler will automagically inject a NULL character
+// at the end of the text.  This allows functions like strlen to work by simply counting the number of elements in
+// the C String array until it encounter the NULL character
 int main ()
 {
     ofstream infile;					// Create a file object for writing
